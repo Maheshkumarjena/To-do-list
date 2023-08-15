@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+/* 
+font-family: 'Caveat', cursive;
+font-family: 'Indie Flower', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Playfair Display', serif;
+font-family: 'Satisfy', cursive; */
+
+.container{
+    
+    width: 100%;
+    height: fot4;
+    min-width: 320px;
+    min-height: 100vh;
+    background: linear-gradient(135deg,pink,purple);
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+} 
+
+
+
+.logo{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    height: 60px;
+    
+}
+
+.logo::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border:  transparent; /* Initial border */
+    border-radius: 10px;
+    animation: neonBorder 1.5s infinite alternate; /* Neon animation */
+}
+
+@keyframes neonBorder {
+    from {
+        border-color: transparent;
+        box-shadow: 0 0 5px rgba(19, 20, 19, 0.7), 0 0 10px yellow transparent;
+    }
+    to {
+        border-color: transparent;
+        box-shadow: 0 0 20px purple, 0 0 30px whitesmoke;
+    }
+}
+
+.logo img{
+    align-self: center;
+    width: 60px;
+    height: 40px;
+}
+.logo h6{
+    font-family: 'Pacifico', cursive;
+}
+
+.todo-app{
+    margin: 100px 0 40px 0;
+    min-width: 300px;
+    height: fit-content;
+    min-height: 100px;
+    color: black;
+    padding: 20px;
+    border-radius: 20px;
+    min-height: 40px;
+    width: 70vw;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+    border-radius: 10px;
+    backdrop-filter: blur(10px); /* Glass effect */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow */
+
+}
+
+.todo-app h2{
+    font-family:'Playfair Display' ;
+    font-size: 30px;
+}
+
+
+
+ button {
+    font-family: "Satisfy";
+    font-weight: 600;
+
+}
+
+input{
+    font-family: 'Caveat';
+font-weight: 600;
+font-size: 25px;
+color: gray !important;
+
+}
+
+ul li p{
+font-family: 'Caveat';
+font-weight: 600;
+font-size: 25px;
+color: black !important;
+}
+
+
+.input input{
+    margin-top: 10px;
+    width: 95%;
+    background-color: ;
+    border: none ;
+    outline: none;
+    padding: 6.7px;
+    padding-right: 50px;
+    border-radius: 20px;
+    
+}
+.input button{
+    
+    margin-top: 10px;
+    position: absolute;
+    background-color: pink;
+    border: none ;
+    outline: none;
+    padding: 13px 20px 13px  ;
+    border-radius: 25px;
+    margin-left: -50px;
+}
+
+.mini-container{
+    /* height: fit-content; */
+    padding: 20px;
+
+    
+}
+
+.mini-container li{
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    list-style: none;
+}
+
+ul li{
+    display: flex;
+    align-items: center;
+}
+
+#checkbox{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #aaa;
+    display: inline-block;
+    cursor: pointer;
+
+}
+
+#checkbox{
+    width: 40px;
+    height: 40px;
+    border: 2px solid pink;
+    border-radius: 50%;
+}
+
+ul li::before{
+    margin: 0px 10px 0px 0px;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-image: url(unchecked.png);
+    background-size: contain;
+}
+li.checked p{
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(checked.png);
+    background-size: contain;
+}
+
+li p{
+    flex: 1;
+}
+
+#cross {
+    display: inline-block;
+    width: 30px; /* Adjust the width to match the icon size */
+    height: 30px; /* Adjust the height to match the icon size */
+    text-align: center;
+    line-height: 30px; /* Center the icon vertically */
+    background-color: transparent;
+    transition: background-color 0.3s;
+    border-radius: 20px;
+}
+
+#cross:hover {
+    background-color: pink; /* Gray background on hover */
+}
